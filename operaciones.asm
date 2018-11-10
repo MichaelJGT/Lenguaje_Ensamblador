@@ -1,6 +1,10 @@
 .ORG 1000h;
 
 
+
+
+
+
 	inicio:
 	
 	MVI A,00h
@@ -23,7 +27,7 @@
 	producto:
 
 	ADI 7; sumamos 7 con adi al valor ya almacenado en el acumulador(inicialmente 00).
-	STA 1101H; Movemos el 7 a la posición de memoria 1101h. 
+	STA 1101H; Movemos el 7 a la posiciï¿½n de memoria 1101h. 
 	DCR C; decrementamos el registro c en una unidad por vuelta.
 	JNZ producto; mientras el registro c no sea 0,se salta a la subrutina producto.
 	 
@@ -40,10 +44,10 @@
 	MVI L,00h
 	
 	MVI A,3h; ponemos en el registro A el valor a dividir (3 en hexadecimal).
-	STA 1100h; movemos el valor del acumulador a la posición de memoria 1100H
+	STA 1100h; movemos el valor del acumulador a la posiciï¿½n de memoria 1100H
 	MOV B,A; movemos el valor del acumulador al registro B(este registro actua como dividendo).
 	MVI A,28h; ponemos en el acumulador el valor 
-	STA 1101h; ponemos el valor del acumulador en la posición de memoria 1101h.
+	STA 1101h; ponemos el valor del acumulador en la posiciï¿½n de memoria 1101h.
 
 	JMP cociente
 
@@ -54,7 +58,7 @@
 	
 	
 	MOV C,A; movemos el valor del acumulador al registro C
-	STA 1102h; ponemos el valor del acumulador en la posición de memoria 1102h.
+	STA 1102h; ponemos el valor del acumulador en la posiciï¿½n de memoria 1102h.
 	
 	INR D;
 	DCR C;
